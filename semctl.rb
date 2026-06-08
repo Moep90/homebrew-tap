@@ -5,21 +5,21 @@
 class Semctl < Formula
   desc "A command line interface for Semaphore UI."
   homepage "https://github.com/moep90/semaphore-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Moep90/semaphore-cli/releases/download/v0.1.0/semaphore-cli_Darwin_x86_64.tar.gz"
-      sha256 "87c8a4acb918f9a390ecdee6d991ba383e0fcfb149a8e39ba890a0a9cb5c70e9"
+      url "https://github.com/Moep90/semctl/releases/download/v0.2.0/semctl_Darwin_x86_64.tar.gz"
+      sha256 "2a9974a3b78ee526a550ebba200f59e66004c29099c018853cb6a11d6af66e7a"
 
       define_method(:install) do
         bin.install "semctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Moep90/semaphore-cli/releases/download/v0.1.0/semaphore-cli_Darwin_arm64.tar.gz"
-      sha256 "a5f0f2567f9e15b04d8a122c4e8c1db35b98959b4ac98ef1fe83e5060d683eac"
+      url "https://github.com/Moep90/semctl/releases/download/v0.2.0/semctl_Darwin_arm64.tar.gz"
+      sha256 "5080e414c9d948e7f5c2c091433a381e15e9b8c90ec554218ddf56e040ef3e50"
 
       define_method(:install) do
         bin.install "semctl"
@@ -29,15 +29,15 @@ class Semctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Moep90/semaphore-cli/releases/download/v0.1.0/semaphore-cli_Linux_x86_64.tar.gz"
-      sha256 "c54afe4108c6b1f5feb8256998d10142fcc30fb017c4a7aad58400878d479aa7"
+      url "https://github.com/Moep90/semctl/releases/download/v0.2.0/semctl_Linux_x86_64.tar.gz"
+      sha256 "81483c0a6c5fae7feb614e342ab4f809ce83b3bd02c1f2c8dab3864f0af4398a"
       define_method(:install) do
         bin.install "semctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Moep90/semaphore-cli/releases/download/v0.1.0/semaphore-cli_Linux_arm64.tar.gz"
-      sha256 "d0d6602966a595b5543eeeca644b38fd1288856eac8416bdabcef2f37cf1c3bb"
+      url "https://github.com/Moep90/semctl/releases/download/v0.2.0/semctl_Linux_arm64.tar.gz"
+      sha256 "4dbe49c1e039d65c69b66e1c177bac9d4a0d1b9a8e489dbdba68a29b2d779a17"
       define_method(:install) do
         bin.install "semctl"
       end

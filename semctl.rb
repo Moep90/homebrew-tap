@@ -5,21 +5,21 @@
 class Semctl < Formula
   desc "A command line interface for Semaphore UI."
   homepage "https://github.com/moep90/semaphore-cli"
-  version "0.2.1"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Moep90/semctl/releases/download/v0.2.1/semctl_Darwin_x86_64.tar.gz"
-      sha256 "3786507e89f75f9da792ffc72f30998baf5f3294d5feedddd667fd415174da87"
+      url "https://github.com/Moep90/semctl/releases/download/v0.3.0/semctl_Darwin_x86_64.tar.gz"
+      sha256 "00b8bf5e4733139dc24a90dff80b26e78c7f60179012091e8f336f24955bb6c2"
 
       define_method(:install) do
         bin.install "semctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Moep90/semctl/releases/download/v0.2.1/semctl_Darwin_arm64.tar.gz"
-      sha256 "c34952eec2adac26206df19ada0935961cb1c840cc79aee63787a5fe80883f23"
+      url "https://github.com/Moep90/semctl/releases/download/v0.3.0/semctl_Darwin_arm64.tar.gz"
+      sha256 "48bead7272d12dd166d549b4c1aa974395955f087d832655867f3914ee2fa246"
 
       define_method(:install) do
         bin.install "semctl"
@@ -29,15 +29,15 @@ class Semctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Moep90/semctl/releases/download/v0.2.1/semctl_Linux_x86_64.tar.gz"
-      sha256 "5feebdf5a24c33426b26bf2cbdfcbd9657df2850ad79a839bf697f6598a3a72a"
+      url "https://github.com/Moep90/semctl/releases/download/v0.3.0/semctl_Linux_x86_64.tar.gz"
+      sha256 "e1f50a9222b3b97c3bce96b8f8afd43293a0692fd2568245415b3d70cadd4aec"
       define_method(:install) do
         bin.install "semctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Moep90/semctl/releases/download/v0.2.1/semctl_Linux_arm64.tar.gz"
-      sha256 "45ad5aec20c450d598ddce777db80dd7d71fd0abf350f996fa6d5ed34d68be34"
+      url "https://github.com/Moep90/semctl/releases/download/v0.3.0/semctl_Linux_arm64.tar.gz"
+      sha256 "d1ee97348a10e0b731a484a969313d221207bcb76e85f7a1c6143e98c1ba1c92"
       define_method(:install) do
         bin.install "semctl"
       end
